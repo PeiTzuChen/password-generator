@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+header {
+  padding: 10px 0 10px 10px;
+  background-color: rgb(92, 101, 131);
+  color: white;
+  font-size: 25px;
+}
+
+section {
+  height: 700px;
+  padding: 60px 10% 0 10%;
+  background-color: rgb(61, 66, 83);
+}
+
+.generator {
+  height: 70vh;
+  background-color: white;
+  border-radius: 4px 4px 0 0;
+  padding: 15px 20px 30px 20px;
+}
+
+.title {
+  border-bottom: 1px solid rgba(61, 66, 83, 0.2);
+  padding: 0px 0 15px 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.footage {
+  padding: 10px 20px 10px 0;
+  background-color: rgb(231, 231, 231);
+  border-radius: 0 0 4px 4px;
+  border-top: 1px solid rgba(61, 66, 83, 0.2);
+  text-align: right;
+  color: rgba(117, 121, 132, 0.886);
+}
+
+.footage-info {
+  color: rgb(37, 145, 227);
+}
+
+#length {
+  margin-left: 103px;
+  width: 40vw;
+  height: 5vh;
+  font-size: large;
+}
+
+#lowercase {
+  margin-left: 10px;
+}
+
+#uppercase {
+  margin-left: 12px;
+}
+
+#number {
+  margin-left: 103px;
+}
+#symbol {
+  margin-left: 106px;
+}
+
+#exclude {
+  margin-left: 86px;
+  width: 40vw;
+  height: 5vh;
+  font-size: large;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  font-size: large;
+}
+
+.form-check {
+  margin-bottom: 20px;
+  font-size: large;
+}
+
+.hint {
+  margin-left: 27vw;
+  font-size: small;
+  color: rgb(121, 121, 121);
+}
+
+/* .result {
+  height: 6vh;
+  background-color: rgba(11, 245, 241, 0.4);
+} */
+
+.warning {
+  height: 6vh;
+  background-color: rgba(11, 245, 241, 0.4);
+  padding: 10px 0 10px 0;
+  margin-bottom: 10px;
+  color: rgb(7, 130, 128);
+  /* display: none; */
+}
+
+.success-password {
+  height: 6vh;
+  background-color: rgba(11, 245, 241, 0.4);
+  padding: 10px 0 10px 0;
+  margin-bottom: 10px;
+  color: rgb(7, 130, 128);
+  display: none;
+}
+
+.warning-color {
+  color: rgb(227, 23, 200);
+}
+
+.success-password-color {
+  color: rgb(227, 23, 200);
+}
+
+button {
+  color: white;
+  height: 5vh;
+  background-color: rgba(4, 162, 15, 0.703);
+  border-color: rgba(4, 162, 15, 0.703);
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
