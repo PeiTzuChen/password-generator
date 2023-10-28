@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
   const inputDataArray = req.body;
-  console.log(inputDataArray);
+  // console.log(inputDataArray);
   generateRandom(inputDataArray);
 });
 
