@@ -16,15 +16,16 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  const inputDataArray = req.body;
-  // console.log(inputDataArray);
-  generateRandom(inputDataArray);
+  const inputLength = req.body.length
+  const characterType = req.body.characterType
+  const excludeChar = req.body.exclude.trim()
+  const password = generateRandom(inputLength,characterType,excludeChar);
+
+  res.render("index", {password});
 });
 
 app.listen(port, () => {
   console.log(`express server is running on http://localhost:${port}`);
 });
 
-//使用post抓checkbox資料與資料長度，傳入module，寫switch case 16個 其中一個不能發生
-//需找symbol表
-// exclude寫另一個module
+
