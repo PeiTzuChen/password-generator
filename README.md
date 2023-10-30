@@ -1,6 +1,7 @@
 # Password Generator
 A simple web application for generating password in some conditions including lowercase character, uppercase character, number and symbol.
 
+![mainpage](https://github.com/PeiTzuChen/password-generator/blob/a66696238887395478a10cb46a7f01af2a4f6541/image/Xnip2023-10-30_16-24-07.jpg)
 ### Features
 - Input password length between 4 ~ 16
 - Select at least one character set for password
