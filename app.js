@@ -20,8 +20,7 @@ app.post("/", (req, res) => {
   const characterType = req.body.characterType
   const excludeChar = req.body.exclude.trim()
   const password = generateRandom(inputLength,characterType,excludeChar);
-
-  res.render("index", {password,inputLength,excludeChar});
+  res.render("password", {password,inputLength,excludeChar});
 });
 
 app.listen(port, () => {

@@ -50,6 +50,8 @@ section {
   width: 40vw;
   height: 5vh;
   font-size: large;
+  border: 2px solid;
+  border-color: rgba(118, 118, 118, 0.385);
 }
 
 #lowercase {
@@ -72,6 +74,8 @@ section {
   width: 40vw;
   height: 5vh;
   font-size: large;
+  border: 2px solid;
+  border-color: rgba(118, 118, 118, 0.385);
 }
 
 .form-group {
@@ -90,27 +94,27 @@ section {
   color: rgb(121, 121, 121);
 }
 
-/* .result {
-  height: 6vh;
-  background-color: rgba(11, 245, 241, 0.4);
-} */
-
 .warning {
-  height: 6vh;
-  background-color: rgba(11, 245, 241, 0.4);
-  padding: 10px 0 10px 0;
-  margin-bottom: 10px;
-  color: rgb(7, 130, 128);
   display: none;
 }
 
-.success-password {
+.warning-show-up {
   height: 6vh;
   background-color: rgba(11, 245, 241, 0.4);
   padding: 10px 0 10px 0;
   margin-bottom: 10px;
   color: rgb(7, 130, 128);
-  /* display: none; */
+}
+
+.success-password {
+  display: none;
+}
+.success-password-show-up {
+  height: 6vh;
+  background-color: rgba(11, 245, 241, 0.4);
+  padding: 10px 0 10px 0;
+  margin-bottom: 10px;
+  color: rgb(7, 130, 128);
 }
 
 .warning-color {
@@ -128,4 +132,12 @@ button {
   border-color: rgba(4, 162, 15, 0.703);
   letter-spacing: 1px;
   border-radius: 4px;
+}
+
+.was-validated #length:invalid {
+  border-color: red;
+}
+
+.was-validated #length:valid {
+  border-color: green;
 }

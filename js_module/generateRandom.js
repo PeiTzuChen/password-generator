@@ -24,9 +24,6 @@ module.exports = (inputLength, characterType, excludeChar) => {
     randomCharacter += symbol;
   }
 
-  console.log(excludeChar);
-  console.log(randomCharacter);
-
   //如果exclude character有輸入
   if (excludeChar.length > 0) {
     const excludeIndex = [];
@@ -44,8 +41,6 @@ module.exports = (inputLength, characterType, excludeChar) => {
       return a - b;
     });
 
-    console.log(excludeIndex);
-
     let randomCharacterAfterExclude = randomCharacter.slice(0, excludeIndex[0]);
     for (let i = 0; i < excludeIndex.length; i++) {
       //擷取剩下需要的字元，組成新的random character table
@@ -55,7 +50,6 @@ module.exports = (inputLength, characterType, excludeChar) => {
       );
     }
     randomCharacter = randomCharacterAfterExclude;
-    console.log(randomCharacterAfterExclude);
   }
 
   //讀取輸入的長度
@@ -67,6 +61,5 @@ module.exports = (inputLength, characterType, excludeChar) => {
     password +=
       randomCharacter[Math.floor(Math.random() * randomCharacter.length)];
   }
-  console.log(password);
   return password;
 };
