@@ -9,7 +9,7 @@ app.set("views", "./views");
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
-const generateRandom = require("./js_module/generateRandom.js");
+const generateRandom = require("./utils/generateRandom.js");
 
 app.get("/", (req, res) => {
   res.render("index");
