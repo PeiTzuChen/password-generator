@@ -28,10 +28,10 @@
         </span>
         <input
           class="form-check-input"
-          name="characterType"
+          name="lowercase"
           type="checkbox"
           id="lowercase"
-          value="lowercase"
+          {{#if lowercase}} checked {{/if}}
         />
         <label for="lowercase">
           (e.g. abcdefg)
@@ -44,10 +44,10 @@
         </span>
         <input
           class="form-check-input"
-          name="characterType"
+          name="uppercase"
           type="checkbox"
           id="uppercase"
-          value="uppercase"
+          {{#if uppercase}} checked {{/if}}
         />
         <label for="uppercase">
           (e.g. ABCDEFG)
@@ -60,10 +60,10 @@
         </span>
         <input
           class="form-check-input"
-          name="characterType"
+          name="number"
           type="checkbox"
           id="number"
-          value="number"
+          {{#if number}} checked {{/if}}
         />
         <label for="number">
           (e.g. 123456)
@@ -76,10 +76,10 @@
         </span>
         <input
           class="form-check-input"
-          name="characterType"
+          name="symbol"
           type="checkbox"
           id="symbol"
-          value="symbol"
+          {{#if symbol}} checked {{/if}}
         />
         <label for="symbol">
           (e.g. @#$%)

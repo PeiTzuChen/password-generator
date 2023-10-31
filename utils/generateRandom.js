@@ -1,27 +1,30 @@
 const lowercaseCharacter = "abcdefghijklmnopqrstuvwxyz";
 const uppercaseCharacter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const number = "1234567890";
-const symbol = "~!@#$%^&*()_-+=?[]/<";
+const numberCharacter = "1234567890";
+const symbolCharacter = "~!@#$%^&*()_-+=?[]/<";
 
 //4 種 checkbox condition
-module.exports = (inputLength, characterType, excludeChar) => {
-  const A = characterType.includes("lowercase");
-  const B = characterType.includes("uppercase");
-  const C = characterType.includes("number");
-  const D = characterType.includes("symbol");
+module.exports = (
+  inputLength,
+  lowercase,
+  uppercase,
+  number,
+  symbol,
+  excludeChar
+) => {
   let randomCharacter = "";
 
-  if (A) {
+  if (lowercase === "on") {
     randomCharacter += lowercaseCharacter;
   }
-  if (B) {
+  if (uppercase === "on") {
     randomCharacter += uppercaseCharacter;
   }
-  if (C) {
-    randomCharacter += number;
+  if (number === "on") {
+    randomCharacter += numberCharacter;
   }
-  if (D) {
-    randomCharacter += symbol;
+  if (symbol === "on") {
+    randomCharacter += symbolCharacter;
   }
 
   //如果exclude character有輸入

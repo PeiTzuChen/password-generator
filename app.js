@@ -17,10 +17,21 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
   const inputLength = req.body.length;
-  const characterType = req.body.characterType;
+  const lowercase = req.body.lowercase;
+  const uppercase = req.body.uppercase;
+  const number = req.body.number;
+  const symbol = req.body.symbol;
   const excludeChar = req.body.exclude.trim();
-  const password = generateRandom(inputLength, characterType, excludeChar);
-  res.render("index", { password, inputLength, excludeChar, characterType });
+  console.log(req.body)
+  const password = generateRandom(
+    inputLength,
+    lowercase,
+    uppercase,
+    number,
+    symbol,
+    excludeChar
+  );
+  res.render("index", { password, inputLength, lowercase, uppercase, number, symbol, excludeChar });
 });
 
 app.listen(port, () => {
