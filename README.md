@@ -8,21 +8,21 @@ A simple web application for generating password in some conditions including lo
 - Click button to acquire specific password
 
 ### Getting started
-1.prepare node.js and npm first
+1.Prepare node.js and npm first
 
-2.make sure in the directory and use local terminal :
+2.Make sure in the directory and use local terminal :
 ```
 npm install
 ```
-3.then
+3.Then,
 ```
 npm run start
 ```
-4.application is running in
+4.Application is running in
 ```
 http://localhost:3000
 ```
-5.application can be paused by 
+5.Application can be paused by 
 ```
 ctrl + c
 ```

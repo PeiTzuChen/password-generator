@@ -16,15 +16,13 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  const inputLength = req.body.length
-  const characterType = req.body.characterType
-  const excludeChar = req.body.exclude.trim()
-  const password = generateRandom(inputLength,characterType,excludeChar);
-  res.render("password", {password,inputLength,excludeChar});
+  const inputLength = req.body.length;
+  const characterType = req.body.characterType;
+  const excludeChar = req.body.exclude.trim();
+  const password = generateRandom(inputLength, characterType, excludeChar);
+  res.render("index", { password, inputLength, excludeChar, characterType });
 });
 
 app.listen(port, () => {
   console.log(`express server is running on http://localhost:${port}`);
 });
-
-
