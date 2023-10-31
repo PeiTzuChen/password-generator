@@ -94,11 +94,11 @@ section {
   color: rgb(121, 121, 121);
 }
 
-.warning {
+.hint-bar-turn-of {
   display: none;
 }
 
-.warning-show-up {
+.hint-bar-warning {
   height: 6vh;
   background-color: rgba(11, 245, 241, 0.4);
   padding: 10px 0 10px 0;
@@ -106,10 +106,7 @@ section {
   color: rgb(7, 130, 128);
 }
 
-.success-password {
-  display: none;
-}
-.success-password-show-up {
+.hint-bar-success {
   height: 6vh;
   background-color: rgba(11, 245, 241, 0.4);
   padding: 10px 0 10px 0;
@@ -117,11 +114,7 @@ section {
   color: rgb(7, 130, 128);
 }
 
-.warning-color {
-  color: rgb(227, 23, 200);
-}
-
-.success-password-color {
+.hint-bar-color {
   color: rgb(227, 23, 200);
 }
 

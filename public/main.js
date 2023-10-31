@@ -3,12 +3,12 @@ const lowercase = document.querySelector("#lowercase");
 const uppercase = document.querySelector("#uppercase");
 const symbol = document.querySelector("#symbol");
 const number = document.querySelector("#number");
-const warning = document.querySelector("#warning");
-const success = document.querySelector("#success-password");
+const warning = document.querySelector(".hint-bar-warning");
+const success = document.querySelector(".hint-bar-success");
 const input = document.querySelector("#length");
 
 form.addEventListener("submit", function onFormClicked(event) {
-  //如果密碼長度不對，表單不會送出，表單密碼長度進行驗證，關閉先前畫面可能出現的hint bar
+  //如果有選 character set 但密碼長度不對，表單不會送出，表單密碼長度進行驗證，關閉先前畫面可能出現的hint-bar-warning or hint-bar-success
   if (
     !form.checkValidity() &&
     (symbol.checked || number.checked || uppercase.checked || lowercase.checked)
@@ -16,13 +16,11 @@ form.addEventListener("submit", function onFormClicked(event) {
     event.stopImmediatePropagation();
     event.preventDefault();
     form.classList.add("was-validated");
-    success.classList.remove("success-password-show-up");
-    success.classList.add("success-password");
-    warning.classList.remove("warning-show-up");
-    warning.classList.add("warning");
+    if (success) success.remove();
+    warning.classList.add("hint-bar-turn-of");
   }
 
-  //如果checkboxes都沒有選到，表單不會送出，關閉先前可能出現的success hint bar出現 warning bar
+  //如果checkboxes都沒有選到，表單不會送出，關閉先前可能出現的hint-bar-success，跳出hint-bar-warning
   if (
     !(
       symbol.checked ||
@@ -33,10 +31,8 @@ form.addEventListener("submit", function onFormClicked(event) {
   ) {
     event.stopImmediatePropagation();
     event.preventDefault();
-    success.classList.remove("success-password-show-up");
-    success.classList.add("success-password");
-    warning.classList.add("warning-show-up");
-    warning.classList.remove("warning");
+    if (success) success.remove()
+    warning.classList.remove("hint-bar-turn-of");
   }
 });
 
