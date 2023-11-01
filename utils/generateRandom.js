@@ -27,35 +27,21 @@ module.exports = (
     randomCharacter += symbolCharacter;
   }
 
-  //如果exclude character有輸入
+  //--------以下流程以string data type處理---------
+
+  //如果exclude character有輸入, randomCharacter需排除特定字元
   if (excludeChar.length > 0) {
-    const excludeIndex = [];
-    //找出需要排除的字元的index
-    for (let i = 0; i < excludeChar.length; i++) {
-      for (let j = 0; j < randomCharacter.length; j++) {
-        if (excludeChar[i] === randomCharacter[j]) {
-          excludeIndex.push(j);
-        }
+    let randomCharacterAfterExclude = "";
+
+    for (const element of randomCharacter) {
+      if (!excludeChar.includes(element)) {
+        randomCharacterAfterExclude += element;
       }
-    }
-
-    // index ascending order
-    excludeIndex.sort((a, b) => {
-      return a - b;
-    });
-
-    let randomCharacterAfterExclude = randomCharacter.slice(0, excludeIndex[0]);
-    for (let i = 0; i < excludeIndex.length; i++) {
-      //擷取剩下需要的字元，組成新的random character table
-      randomCharacterAfterExclude += randomCharacter.slice(
-        excludeIndex[i] + 1,
-        excludeIndex[i + 1]
-      );
     }
     randomCharacter = randomCharacterAfterExclude;
   }
 
-  //讀取輸入的長度
+  //得到密碼的長度，產生密碼
   const passwordLength = Number(inputLength);
   let password = "";
 

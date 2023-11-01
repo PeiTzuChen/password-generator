@@ -22,7 +22,6 @@ app.post("/", (req, res) => {
   const number = req.body.number;
   const symbol = req.body.symbol;
   const excludeChar = req.body.exclude.trim();
-  console.log(req.body)
   const password = generateRandom(
     inputLength,
     lowercase,
